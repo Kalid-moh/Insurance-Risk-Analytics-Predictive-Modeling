@@ -3,3 +3,4 @@ data/
 .vscode
 notebooks\.ipynb_checkpoints
 scripts\__pycache__
+/data.csv
