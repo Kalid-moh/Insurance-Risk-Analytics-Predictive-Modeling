@@ -1,4 +1,4 @@
-# AlphaCares-Insurance-Analytics
+# Insurance-Risk-Analytics-Predictive-Modeling
 
 ## Project Overview
 
@@ -21,7 +21,7 @@ This repository contains the analysis of historical insurance claim data for Alp
 
 ```plaintext
 
-TellCo-Telecom-Analysis/
+Insurance-Risk-Analytics-Predictive-Modeling/
     ├── .vscode/
 │   └── settings.json
 ├── .github/
