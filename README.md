@@ -1,118 +1,83 @@
-# 🚗 Insurance Risk Modeling & Dynamic Pricing System
+# AlphaCares-Insurance-Analytics
 
-This project develops a robust, explainable, and risk-aware pricing model for auto insurance policies. It incorporates statistical analysis, machine learning, and reproducible data practices to predict insurance claim severity and optimize premium pricing.
+## Project Overview
 
-> ✅ Completed as part of the Week 3 Challenge at **10Academy**.
+This repository contains the analysis of historical insurance claim data for AlphaCare Insurance Solutions (ACIS). The project aims to optimize the marketing strategy and identify "low-risk" targets for potential premium reductions, ultimately attracting new clients.
 
----
+## Business Objectives
 
-## 🧭 Project Goals
+1. Analyze historical insurance claim data
+2. Optimize marketing strategy
+3. Discover "low-risk" targets for premium reduction
+4. Attract new clients
 
-- Understand and explore insurance data to uncover actionable insights.
-- Establish a reproducible data pipeline using Git, GitHub, and DVC.
-- Statistically validate hypotheses related to insurance risk.
-- Build predictive models to estimate:
-  - 💰 **Claim Severity** — How much we might pay.
-  - 📈 **Claim Probability** — How likely a customer is to claim.
-- Construct a **dynamic pricing formula** that incorporates business margins.
+## Key Components
 
----
+1. Exploratory Data Analysis (EDA)
+2. A/B Hypothesis Testing
+3. Statistical Modeling
 
-## 🔧 Technologies & Tools
+## Project Structure
 
-| Area            | Tools Used                        |
-| --------------- | --------------------------------- |
-| Programming     | Python, Jupyter                   |
-| Data Handling   | Pandas, NumPy, DVC                |
-| Visualization   | Matplotlib, Seaborn, Plotly       |
-| Modeling        | Scikit-learn, XGBoost, SHAP, LIME |
-| Version Control | Git, GitHub, GitHub Actions       |
-| CI/CD           | GitHub Actions                    |
-| Environment     | `venv` + `requirements.txt`       |
+```plaintext
 
----
+TellCo-Telecom-Analysis/
+    ├── .vscode/
+│   └── settings.json
+├── .github/
+│   └── workflows/
+│       └── unittests.yml   # GitHub Actions
+├── .gitignore              # files and folders to be ignored by git
+├── requirements.txt        # contains dependencies for the project
+├── README.md               # Documentation for the projects
+├── src/
+│   └── __init__.py
+├── notebooks/
+│   ├── __init__.py
+|   ├── insurance_EDA.ipynb            # Jupyter notebook for data cleaning and EDA analysis
+|   ├── hypothesis_analysis.ipynb      # Jupyter notebook for A/B Hypothesis Testing analysis
+|   ├── statistical_modeling.ipynb     # Jupyter notebook for Statistical Modeling analysis
+│   └── README.md                      # Description of notebooks directory
+├── tests/
+│   └── __init__.py
+└── scripts/
+    ├── __init__.py
+    ├── data_processing.py          #  contains a script for data processing and EDA analysis
+    ├── hypothesis_analysis.py      #  contains a script file for A/B Hypothesis testing
+    ├── statistical_modeling.py     #  contains a script file for Statistical modeling
+    └── README.md                   # Description of scripts directory
 
-## 📂 Repository Structure
-
-```text
-.
-├── data/ # Raw and processed data (tracked via DVC)
-├── models/ # Saved models
-├── notebooks/ # Jupyter notebooks for EDA, testing, modeling
-├── src/ # Core source code
-│ ├── preprocessing/ # Cleaning, transformation, encoding
-│ ├── task_3/ # Hypothesis testing modules
-│ └── task_4/ # Modeling pipeline and interpretation
-├── tests/ # Unit tests
-├── .dvc/ # DVC metadata
-├── .github/workflows/ # GitHub Actions CI pipeline
-├── dvc.yaml # DVC pipeline definition
-├── requirements.txt # Python dependencies
-└── README.md # Project overview (this file)
 ```
 
----
+## Setup and Installation
 
-## 📊 Task Breakdown
-
-### 🔍 Task 1: EDA & Git Setup
-
-- Configured Git and GitHub, created `task-1` branch
-- Performed EDA on claims, premiums, and customer demographics
-- Visualized insights across provinces, genders, and vehicle types
-- Identified key drivers of loss ratio and risk
-
-### 💾 Task 2: Data Version Control (DVC)
-
-- Installed DVC and initialized version control
-- Added data files to DVC tracking
-- Set up a **local remote storage** and pushed data
-- Ensured reproducibility and auditability of datasets
-
----
-
-## 📦 Setup Instructions
-
-1. **Clone the repository:**
-   ```bash
+1. Clone this repository:
+   ```
    git clone https://github.com/Kalid-moh/Insurance-Risk-Analytics-Predictive-Modeling.git
-   cd insurance-risk-model
-   Install dependencies:
+   cd Insurance-Risk-Analytics-Predictive-Modeling
+   ```
+2. Create a virtual environment:
+   ```
+   python -m venv .venv
+   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+   ```
+3. Install required packages:
+   ```
+   pip install -r requirements.txt
    ```
 
-```bash
-python -m venv venv
-source venv/bin/activate  # Windows: venv\Scripts\activate
-pip install -r requirements.txt
-```
+## Usage
 
-Run notebooks:
+1. Activate the virtual environment:
+   ```
+   source .venv/bin/activate  # On Windows, use `.venv\Scripts\activate`
+   ```
+2. Launch Jupyter Notebook:
+   ```
+   jupyter notebook
+   ```
+3. Open the notebooks in the `notebooks/` directory to view or run the analyses.
 
-```bash
-jupyter notebook
-```
+## Acknowledgments
 
-Run tests:
-
-```bash
-pytest
-```
-
-🧪 Data Versioning with DVC
-bash
-dvc init
-dvc add data/raw/insurance_data.csv
-dvc remote add -d localstorage /path/to/your/storage
-dvc push
-To reproduce the data pipeline:
-
-bash
-dvc pull
-✅ CI/CD
-GitHub Actions is configured for:
-
-Code linting
-
-Unit tests
-
-Model validation (optional step)
+- 10 Academy for providing the challenge and dataset
