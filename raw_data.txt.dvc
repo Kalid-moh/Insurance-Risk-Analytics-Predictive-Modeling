@@ -1,0 +1,5 @@
+outs:
+- md5: 62ddc50d092c004e14ed205ac61cc0cc
+  size: 99
+  hash: md5
+  path: raw_data.txt

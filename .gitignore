@@ -4,3 +4,5 @@ data/
 notebooks\.ipynb_checkpoints
 scripts\__pycache__
 /data.csv
+/raw_data.txt
+notebooks/hypothesis_analysis.ipynb
